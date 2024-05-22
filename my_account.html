@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofia - Women's Clothes store</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Favicon -->
+  <link rel="icon" href="images/brand/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+  <!-- offcanvas -->
+  <div class="offcanvas offcanvas-end" id="cart_canvas">
+    <div class="offcanvas-header">
+      <h6 class="text-uppercase">shopping bag <span class="text-capitalize">(5 items)</span> </h6>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body bg-light">
+      <ul class="list-unstyled">
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <img src="images/products/product_1.webp" class="" alt="...">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-01</h5>
+              <p class="card-text">Rs. 16,650</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <img src="images/products/product_2.webp" class="" alt="...">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-02</h5>
+              <p class="card-text">Rs. 18,950</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <img src="images/products/product_3.webp" class="" alt="...">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-03</h5>
+              <p class="card-text">Rs. 21,350</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <img src="images/products/product_4.webp" class="" alt="...">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-04</h5>
+              <p class="card-text">Rs. 24,500</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <img src="images/products/product_5.webp" class="" alt="...">
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-05</h5>
+              <p class="card-text">Rs. 28,750</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer">
+      <div class="d-flex gap-2 w-100 align-items-center justify-content-between">
+        <h6 class="fw-normal">Sub Total</h6>
+        <h6 class="fw-normal">$20.63</h6>
+      </div>
+      <small class="text-center w-100 mt-2 mb-3 d-block">Shipping, taxes, and discount codes calculated at checkout.</small>
+      <a href="checkout.html" class="btn w-100">
+        <span>Check Out</span>
+      </a>
+      <a href="cart.html" class="text_btn mt-2">
+        <span>View all cart</span>
+      </a>
+    </div>
+  </div>
+  <!-- end offcanvas -->
+  <!--============================
+  =            Header            =
+  =============================-->
+  <header>
+    <div class="header_top d-sm-block d-none xs-width py-2 text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center justify-content-start gap-2">
+              <i class="ph ph-truck"></i>
+              <p class="small">Free Shipping Above $300</p>
+            </div>
+          </div>
+          <div class="col-sm-4 d-none d-sm-block">
+            <div class="d-flex align-items-center justify-content-center gap-2">
+              <i class="ph ph-envelope-simple"></i>
+              <p class="small">info.sofia@sofia.ae</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center justify-content-end gap-2">
+              <i class="ph ph-phone"></i>
+              <p class="small">+1 (424) 433-3993</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_middle xs-width py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <a href="index.html" class="logo">
+              <img src="images/brand/logo.svg"/ alt="Brand Logo">
+            </a>
+          </div>
+          <div class="col-sm-6 d-md-block d-none">
+            <div class="header_search_wrapper">
+              <a href="#" class="header_icon d-md-none d-flex">
+                <i class="ph ph-magnifying-glass"></i>
+              </a>
+              <form class="form-inline w-100 d-md-flex d-none">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit"><i class="ph ph-magnifying-glass"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="header_ecom_icons">
+              <a href="cart.html" class="header_icon icon_badge" data-bs-toggle="offcanvas" data-bs-target="#cart_canvas" data-value="5">
+                <i class="ph ph-shopping-bag"></i>
+                <span class="d-md-block d-none">Cart</span>
+              </a>
+              <a href="cart.html" class="header_icon d-flex d-md-none">
+                <i class="ph ph-magnifying-glass"></i>
+              </a>
+              <a href="track_order.html" class="header_icon d-flex">
+                <i class="ph ph-truck"></i>
+              </a>
+              <a href="login.html" class="header_icon">
+                <i class="ph ph-user-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom xs-width">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-2">
+            <button data-bs-toggle="offcanvas" data-bs-target="#menu" class="sale_btn d-lg-none px-3 d-flex">
+              <i class="ph ph-list"></i>
+            </button>
+            <div id="menu" class="menu">
+              <div class="offcanvas-header d-lg-none d-flex">
+                <h5 class="">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <div class="offcanvas-body overflow">
+                <ul class="header_categories d-lg-flex justify-content-between align-items-center gap-4">
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">eid collection</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Luxury Formals</span>
+                      </a>
+                      <a href="collections.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>View All</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Unstitched</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Cotton Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Lawn Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Embroidered Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Printed Unstitched</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Stitched</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Casual Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Formal Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Designer Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Party Wear Stitched</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Couture Wedding Wear</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Bridal Dresses</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Groom Sherwanis</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Wedding Accessories</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Jewelry</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Earrings</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Necklaces</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Bracelets</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Accessories</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Bags</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Belts</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Scarves</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Casual Wear</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Everyday Comfort</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Weekend Vibes</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Formal Wear</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Office Attire</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Business Meetings</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Summer Essentials</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Light Dresses</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Breezy Tops</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--====  End of Header  ====-->
+  <!--==========================
+  =            Main            =
+  ===========================-->
+  <main>
+    <section class="account">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="heading">
+              <h2 class="heading_title">My account</h2>
+            </div>
+            <div class="account_wrapper">
+              <div class="account_sidebar">
+                <ul class="account_list">
+                  <li>
+                    <a class="active" href="my_account.html">
+                      <i class="ph ph-user-circle"></i>
+                      <span>My account</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="address_book.html">
+                      <i class="ph ph-map-pin"></i>
+                      <span>My address book</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="orders.html">
+                      <i class="ph ph-shopping-bag"></i>
+                      <span>My orders</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="account_main">
+                <h4>My account</h4>
+                <form class="account_form">
+                  <div class="form-row">
+                    <h5>Personal Information</h5>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <p>When signing up on an e-commerce site, share your name, email, and phone. Keep your info secure. Enter details accurately for smooth account management.</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="firstName" class="form-label">First Name (FS)</label>
+                          <input type="text" class="form-control" id="firstName" placeholder="eg. Mateusz">
+                        </div>
+                        <div class="mb-3">
+                          <label for="birthdate" class="form-label">Birthdate (BD)</label>
+                          <input type="date" class="form-control" id="birthdate">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="lastName" class="form-label">Last Name (LS)</label>
+                          <input type="text" class="form-control" id="lastName" placeholder="eg. Kowalski">
+                        </div>
+                        <div class="mb-3">
+                          <label for="phoneNumber" class="form-label">Phone Number (PN)</label>
+                          <input type="tel" class="form-control" id="phoneNumber" placeholder="eg. +1234567890">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <h5>Email Address</h5>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <p>Providing your email address is crucial for account creation on e-commerce platforms, facilitating verification and updates.</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="email" class="form-label">Email Address</label>
+                          <input type="email" class="form-control" id="email" placeholder="eg. example@example.com">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="password" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <h5>Password</h5>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <p>Choose a strong, memorable password for security and update it regularly to protect your account.</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="current-password" class="form-label">Current Password</label>
+                          <input type="password" class="form-control" id="current-password" placeholder="Enter your current password">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="mb-3">
+                          <label for="new-password" class="form-label">New Password</label>
+                          <input type="password" class="form-control" id="new-password" placeholder="Enter your new password">
+                        </div>
+                      </div>
+                      <div class="col-lg-8 offset-lg-4">
+                        <div class="mb-3">
+                          <label for="confirm-password" class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control" id="confirm-password" placeholder="Confirm your new password">
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="d-flex align-items-center justify-content-end gap-2">
+                          <button class="btn">
+                            <span>Save</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--====  End of Main  ====-->
+  <!--============================
+  =            Footer            =
+  =============================-->
+  <footer class="footer pt-5 pb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <a href="index.html" class="logo mx-0 mb-3">
+            <img src="images/brand/logo.svg" alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+          <div class="d-flex gap-2 align-items-center">
+            <a href="#"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-x-logo"></i></a>
+            <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <h5 class="mb-3">Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Dresses</a></li>
+            <li><a href="#">Tops</a></li>
+            <li><a href="#">Bottoms</a></li>
+            <li><a href="#">Outerwear</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <h5 class="mb-3">Subscribe</h5>
+          <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+          <form action="#" method="post" class="subscribe-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </div>
+          </form>
+          <div class="footer_payment_methods mt-3">
+            <figure class="method">
+              <img src="images/payments/visa.svg" alt="visa">
+            </figure>
+            <figure class="method">
+              <img src="images/payments/amex.svg" alt="amex">
+            </figure>
+            <figure class="method">
+              <img src="images/payments/mastercard.svg" alt="mastercard">
+            </figure>
+            <figure class="method">
+              <img src="images/payments/elo.svg" alt="elo">
+            </figure>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-10">
+          <p>&copy; 2024 SOFIA Women's Clothing Store. All rights reserved.</p>
+        </div>
+        <div class="col-md-2 text-md-right">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--====  End of Footer  ====-->
+  <!-- Scripts Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/phosphor-icons.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

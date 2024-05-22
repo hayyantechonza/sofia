@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofia - Women's Clothes store</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- Favicon -->
+  <link rel="icon" href="images/brand/favicon.svg" type="image/x-icon">
+</head>
+
+<body>
+  <!-- offcanvas -->
+  <div class="offcanvas offcanvas-end" id="cart_canvas">
+    <div class="offcanvas-header">
+      <h6 class="text-uppercase">shopping bag <span class="text-capitalize">(5 items)</span> </h6>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body bg-light">
+      <ul class="list-unstyled">
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <a href="single_product.html"><img src="images/products/product_1.webp" class="" alt="..."></a>
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-01</h5>
+              <p class="card-text">Rs. 16,650</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <a href="single_product.html"><img src="images/products/product_2.webp" class="" alt="..."></a>
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-02</h5>
+              <p class="card-text">Rs. 18,950</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <a href="single_product.html"><img src="images/products/product_3.webp" class="" alt="..."></a>
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-03</h5>
+              <p class="card-text">Rs. 21,350</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <a href="single_product.html"><img src="images/products/product_4.webp" class="" alt="..."></a>
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-04</h5>
+              <p class="card-text">Rs. 24,500</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="card cart_product mb-3">
+            <figure>
+              <a href="single_product.html"><img src="images/products/product_5.webp" class="" alt="..."></a>
+            </figure>
+            <div class="card-body">
+              <h5 class="card-title">drs-05</h5>
+              <p class="card-text">Rs. 28,750</p>
+            </div>
+            <div class="card-footer">
+              <button class="btn">
+                <i class="ph ph-trash"></i>
+              </button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="offcanvas-footer">
+      <div class="d-flex gap-2 w-100 align-items-center justify-content-between">
+        <h6 class="fw-normal">Sub Total</h6>
+        <h6 class="fw-normal">$20.63</h6>
+      </div>
+      <small class="text-center w-100 mt-2 mb-3 d-block">Shipping, taxes, and discount codes calculated at checkout.</small>
+      <a href="checkout.html" class="btn w-100">
+        <span>Check Out</span>
+      </a>
+      <a href="cart.html" class="text_btn mt-2">
+        <span>View all cart</span>
+      </a>
+    </div>
+  </div>
+  <!-- end offcanvas -->
+  <!--============================
+  =            Header            =
+  =============================-->
+  <header>
+    <div class="header_top d-sm-block d-none xs-width py-2 text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center justify-content-start gap-2">
+              <i class="ph ph-truck"></i>
+              <p class="small">Free Shipping Above $300</p>
+            </div>
+          </div>
+          <div class="col-sm-4 d-none d-sm-block">
+            <div class="d-flex align-items-center justify-content-center gap-2">
+              <i class="ph ph-envelope-simple"></i>
+              <p class="small">info.sofia@sofia.ae</p>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="d-flex align-items-center justify-content-end gap-2">
+              <i class="ph ph-phone"></i>
+              <p class="small">+1 (424) 433-3993</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_middle xs-width py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-6">
+            <a href="index.html" class="logo">
+              <img src="images/brand/logo.svg"/ alt="Brand Logo">
+            </a>
+          </div>
+          <div class="col-sm-6 d-md-block d-none">
+            <div class="header_search_wrapper">
+              <a href="#" class="header_icon d-md-none d-flex">
+                <i class="ph ph-magnifying-glass"></i>
+              </a>
+              <form class="form-inline w-100 d-md-flex d-none">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="search-addon">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit"><i class="ph ph-magnifying-glass"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-3 col-6">
+            <div class="header_ecom_icons">
+              <a href="cart.html" class="header_icon icon_badge" data-bs-toggle="offcanvas" data-bs-target="#cart_canvas" data-value="5">
+                <i class="ph ph-shopping-bag"></i>
+                <span class="d-md-block d-none">Cart</span>
+              </a>
+              <a href="cart.html" class="header_icon d-flex d-md-none">
+                <i class="ph ph-magnifying-glass"></i>
+              </a>
+              <a href="track_order.html" class="header_icon d-flex">
+                <i class="ph ph-truck"></i>
+              </a>
+              <a href="login.html" class="header_icon">
+                <i class="ph ph-user-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header_bottom xs-width">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-2">
+            <button data-bs-toggle="offcanvas" data-bs-target="#menu" class="sale_btn d-lg-none px-3 d-flex">
+              <i class="ph ph-list"></i>
+            </button>
+            <div id="menu" class="menu">
+              <div class="offcanvas-header d-lg-none d-flex">
+                <h5 class="">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+              </div>
+              <div class="offcanvas-body overflow">
+                <ul class="header_categories d-lg-flex justify-content-between align-items-center gap-4">
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">eid collection</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Luxury Formals</span>
+                      </a>
+                      <a href="collections.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>View All</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Unstitched</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Cotton Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Lawn Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Embroidered Unstitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Printed Unstitched</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Stitched</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Casual Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Formal Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Designer Stitched</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Party Wear Stitched</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Couture Wedding Wear</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Bridal Dresses</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Groom Sherwanis</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Wedding Accessories</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Jewelry</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Earrings</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Necklaces</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Bracelets</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Accessories</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Bags</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Belts</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Scarves</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Casual Wear</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Everyday Comfort</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Weekend Vibes</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Formal Wear</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Office Attire</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Business Meetings</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <a class="text-capitalize" href="javascript:void(0)">Summer Essentials</a>
+                    <div class="dropdown-menu">
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Light Dresses</span>
+                      </a>
+                      <a href="single_collection.html" class="dropdown-item">
+                        <i class="ph ph-caret-right"></i>
+                        <span>Breezy Tops</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!--====  End of Footer  ====-->
+  <!--============================
+  =            Filter            =
+  =============================-->
+  <div class="offcanvas offcanvas-start" id="filter">
+    <div class="offcanvas-header">
+      <h5 class="text-uppercase">Filter</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="filter_side_item">
+        <h5 class="filter_side_heading">Price filter</h5>
+        <div class="price_slide_wrapper">
+          <div class="highest_price">
+            <p>The highest price is $300</p>
+            <button class="price_rest">Reset</button>
+          </div>
+          <div class="price_slider">
+            <div id="slider-range"></div>
+          </div>
+          <div class="price_inputs">
+            <label for="" class="price_input min_value">
+              <span>$</span>
+              <input type="number" placeholder="eg.50">
+            </label>
+            <label for="" class="price_input max_value">
+              <span>$</span>
+              <input type="number" placeholder="eg.50">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="filter_side_item">
+        <h5 class="filter_side_heading">Categories</h5>
+        <div class="filter_checkList">
+          <label for="sofa" class="filter_check form-check">
+            <input type="checkbox" id="sofa" class="form-check-input">
+            <span>Sofa</span>
+            <small>(37)</small>
+          </label>
+          <label for="coffee_table" class="filter_check form-check">
+            <input type="checkbox" id="coffee_table" class="form-check-input">
+            <span>Coffee Table</span>
+            <small>(42)</small>
+          </label>
+        </div>
+      </div>
+      <div class="filter_side_item">
+        <h5 class="filter_side_heading">Availability</h5>
+        <div class="filter_checkList">
+          <label for="in_stock" class="filter_check form-check">
+            <input type="checkbox" id="in_stock" class="form-check-input">
+            <span>In stock</span>
+            <small>(198)</small>
+          </label>
+          <label for="out_of_stock" class="filter_check form-check">
+            <input type="checkbox" id="out_of_stock" class="form-check-input">
+            <span>Out of stock</span>
+            <small>(79)</small>
+          </label>
+        </div>
+      </div>
+      <div class="filter_side_item">
+        <h5 class="filter_side_heading">Color Filter</h5>
+        <div class="color_filter">
+          <label for="86aab0" style="background: #86aab0;">
+            <input type="checkbox" id="86aab0" value="#86aab0">
+          </label>
+          <label for="ba957d" style="background: #ba957d;">
+            <input type="checkbox" id="ba957d" value="#ba957d">
+          </label>
+          <label for="a52a2a" style="background: #a52a2a;">
+            <input type="checkbox" id="a52a2a" value="#a52a2a">
+          </label>
+          <label for="b87145" style="background: #b87145;">
+            <input type="checkbox" id="b87145" value="#b87145">
+          </label>
+          <label for="cdd1c6" style="background: #cdd1c6;">
+            <input type="checkbox" id="cdd1c6" value="#cdd1c6">
+          </label>
+        </div>
+      </div>
+      <div class="filter_side_item">
+        <h5 class="filter_side_heading">Sizes</h5>
+        <div class="filter_checkList">
+          <label for="small" class="filter_check form-check">
+            <input type="checkbox" id="small" class="form-check-input">
+            <span>Small</span>
+            <small>(10)</small>
+          </label>
+          <label for="Medium" class="filter_check form-check">
+            <input type="checkbox" id="Medium" class="form-check-input">
+            <span>Medium</span>
+            <small>(30)</small>
+          </label>
+          <label for="Large" class="filter_check form-check">
+            <input type="checkbox" id="Large" class="form-check-input">
+            <span>Large</span>
+            <small>(50)</small>
+          </label>
+          <label for="ExtraLarge" class="filter_check form-check">
+            <input type="checkbox" id="ExtraLarge" class="form-check-input">
+            <span>ExtraLarge</span>
+            <small>(70)</small>
+          </label>
+          <label for="1kg" class="filter_check form-check">
+            <input type="checkbox" id="1kg" class="form-check-input">
+            <span>1kg</span>
+            <small>(50)</small>
+          </label>
+          <label for="2kg" class="filter_check form-check">
+            <input type="checkbox" id="2kg" class="form-check-input">
+            <span>2kg</span>
+            <small>(60)</small>
+          </label>
+          <label for="3kg" class="filter_check form-check">
+            <input type="checkbox" id="3kg" class="form-check-input">
+            <span>3kg</span>
+            <small>(70)</small>
+          </label>
+          <label for="4kg" class="filter_check form-check">
+            <input type="checkbox" id="4kg" class="form-check-input">
+            <span>4kg</span>
+            <small>(90)</small>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="offcanvas-footer d-flex justify-content-end gap-2">
+      <button class="btn outline" data-bs-dismiss="offcanvas">
+        <span>cencal</span>
+      </button>
+      <button class="btn" data-bs-dismiss="offcanvas">
+        <span>apply</span>
+      </button>
+    </div>
+  </div>
+  <!--====  End of Filter  ====-->
+  <!--==========================
+  =            Main            =
+  ===========================-->
+  <main>
+    <!-- Single Collection -->
+    <section class="new_arrivals py-4">
+      <div class="container">
+        <!-- Filter row -->
+        <div class="row mb-4">
+          <div class="col-6">
+            <button class="btn" data-bs-target="#filter" data-bs-toggle="offcanvas">
+              <i class="ph ph-funnel-simple"></i>
+              <span>Filter</span>
+            </button>
+          </div>
+          <div class="col-6 d-flex justify-content-end">
+            <select class="form-select">
+              <option selected>Sort by Featured</option>
+              <option>Best selling</option>
+              <option>Alphabetically, A-Z</option>
+              <option>Alphabetically, Z-A</option>
+              <option>Price, low to high</option>
+              <option>Price, high to low</option>
+              <option>Date, old to new</option>
+              <option>Date, new to old</option>
+            </select>
+          </div>
+        </div>
+        <div class="row products_row">
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <span class="badge">Sale</span>
+                <a href="single_product.html"><img src="images/products/product_1.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-01</h5>
+                  </a>
+                  <p class="card-text">Rs. 16,650</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <a href="single_product.html"><img src="images/products/product_2.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-02</h5>
+                  </a>
+                  <p class="card-text">Rs. 18,950</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <span class="badge">Sale</span>
+                <a href="single_product.html"><img src="images/products/product_3.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-03</h5>
+                  </a>
+                  <p class="card-text">Rs. 21,350</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <a href="single_product.html"><img src="images/products/product_4.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-04</h5>
+                  </a>
+                  <p class="card-text">Rs. 24,500</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <a href="single_product.html"><img src="images/products/product_5.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-05</h5>
+                  </a>
+                  <p class="card-text">Rs. 28,750</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <a href="single_product.html"><img src="images/products/product_6.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-06</h5>
+                  </a>
+                  <p class="card-text">Rs. 32,450</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <span class="badge">Sale</span>
+                <a href="single_product.html"><img src="images/products/product_7.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-07</h5>
+                  </a>
+                  <p class="card-text">Rs. 36,850</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-6 mb-3">
+            <div class="card product_card">
+              <figure class="product_img">
+                <span class="badge">Sale</span>
+                <a href="single_product.html"><img src="images/products/product_8.webp" class="card-img" alt="Product Image"></a>
+              </figure>
+              <div class="card-body">
+                <hgroup>
+                  <a href="single_product.html">
+                    <h5 class="card-title">drs-08</h5>
+                  </a>
+                  <p class="card-text">Rs. 39,950</p>
+                </hgroup>
+                <a href="#" class="btn">
+                  <span class="d-md-block d-none me-1">Add to cart</span>
+                  <i class="ph ph-shopping-cart-simple"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Single Collection end -->
+  </main>
+  <!--====  End of Main  ====-->
+  <!--============================
+  =            Footer            =
+  =============================-->
+  <footer class="footer pt-5 pb-2">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <a href="index.html" class="logo mx-0 mb-3">
+            <img src="images/brand/logo.svg" alt="">
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</p>
+          <div class="d-flex gap-2 align-items-center">
+            <a href="#"><i class="ph ph-facebook-logo"></i></a>
+            <a href="#"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#"><i class="ph ph-x-logo"></i></a>
+            <a href="#"><i class="ph ph-pinterest-logo"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <h5 class="mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <h5 class="mb-3">Categories</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Dresses</a></li>
+            <li><a href="#">Tops</a></li>
+            <li><a href="#">Bottoms</a></li>
+            <li><a href="#">Outerwear</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
+          <h5 class="mb-3">Subscribe</h5>
+          <p>Subscribe to our newsletter for exclusive offers and updates.</p>
+          <form action="#" method="post" class="subscribe-form">
+            <div class="input-group">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </div>
+          </form>
+          <div class="footer_payment_methods mt-3">
+            <figure class="method">
+              <img src="images/payments/visa.svg" alt="visa">
+            </figure>
+            <figure class="method">
+              <img src="images/payments/amex.svg" alt="amex">
+            </figure>
+            <figure class="method">
+              <img src="images/payments/mastercard.svg" alt="mastercard">
+            </figure>
+            <figure class="method">
+              <img src="images/payments/elo.svg" alt="elo">
+            </figure>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-10">
+          <p>&copy; 2024 SOFIA Women's Clothing Store. All rights reserved.</p>
+        </div>
+        <div class="col-md-2 text-md-right">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--====  End of Footer  ====-->
+  <!-- Scripts Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/phosphor-icons.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
